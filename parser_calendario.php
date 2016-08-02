@@ -24,7 +24,7 @@ foreach($table->find('tr') as $row) {
     //prendo la prima colonna, dove troverò url ed icone
     $riga_icona = str_get_html($row->firstchild()->innertext);
     $json_riga["url_evento"] = "https://www.rio2016.com". $riga_icona->find('a', 0)->href;
-    $json_riga["icona_evento"] = $riga_icona->find('span', 0)->attr["class"];
+    $json_riga["icona_evento"] = explode(" ", $riga_icona->find('span', 0)->attr["class"])[sizeof(explode(" ", $riga_icona->find('span', 0)->attr["class"])) - 1];
 
     //prendo la seconda colonna, dove troverò il nome dell'evento
     $riga_nome_evento = str_get_html($row->children(1)->innertext);
@@ -40,7 +40,7 @@ foreach($table->find('tr') as $row) {
             $json_giorno["giorno"] = $i+1;
 
             //icona dell'evento
-            $json_giorno["icona_evento"] = $riga_giorno->find('span', 0)->attr["class"];
+            $json_giorno["icona_evento"] = explode(" ", $riga_giorno->find('span', 0)->attr["class"])[sizeof(explode(" ", $riga_giorno->find('span', 0)->attr["class"])) - 1];
 
             //url dell'evento
             $json_giorno["url_evento"] = "https://www.rio2016.com". $riga_giorno->find('a', 0)->href;
