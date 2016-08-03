@@ -1,9 +1,4 @@
 <?php
-/**
-
-	Parser of the torch relay
-
-*/
 
 require "simple_html_dom.php";
 
