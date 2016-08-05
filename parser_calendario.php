@@ -6,6 +6,8 @@
  * Time: 21:51
  */
 
+/* Parser of https://www.rio2016.com/en/schedule-and-results */
+
 require "simple_html_dom.php";
 
 //classe del calendario
