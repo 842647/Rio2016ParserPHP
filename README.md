@@ -3,6 +3,7 @@ A collection of PHP parser for giving data from the official website!
 
 This is an example of the json that the parser return:
 
+```javascript
 {
   "url_evento": "https://www.rio2016.com/en/artistic-gymnastics-schedule-and-results",
   "icona_evento": "sprite-actions--ga",
@@ -55,3 +56,4 @@ This is an example of the json that the parser return:
     }
   ]
 },
+```
